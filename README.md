@@ -1,5 +1,7 @@
 # depth_image_publisher
 
+[![CI](https://github.com/knorth55/depth_image_publisher/actions/workflows/main.yml/badge.svg)](https://github.com/knorth55/depth_image_publisher/actions/workflows/main.yml)
+
 Image publisher for depth image
 
 ## Sample 
