@@ -29,6 +29,11 @@
   <run_depend>nodelet</run_depend>
   <run_depend>roscpp</run_depend>
   <run_depend>sensor_msgs</run_depend>
+
+  <test_depend>roslaunch</test_depend>
+  <test_depend>roslint</test_depend>
+  <test_depend>rostest</test_depend>
+
   <export>
     <nodelet plugin="${prefix}/nodelet_plugins.xml"/>
   </export>
