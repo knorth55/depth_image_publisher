@@ -7,5 +7,11 @@ Image publisher for depth image
 ### 16UC1
 
 ```
-rosrun depth_image_publisher depth_image_publisher $(rospack find depth_image_publisher)/sample/sample_16uc1.png _encoding:=16UC1
+rosrun depth_image_publisher depth_image_publisher $(rospack find depth_image_publisher)/sample/sample_16uc1.png
+```
+
+### 32FC1
+
+```
+rosrun depth_image_publisher depth_image_publisher $(rospack find depth_image_publisher)/sample/sample_16uc1.png _encoding:=32FC1
 ```
