@@ -140,17 +140,13 @@ public:
     NODELET_INFO("File name for publishing image is : %s", filename_.c_str());
     try {
       image_ = cv::imread(filename_, cv::IMREAD_UNCHANGED);
-      int flag;
-      if (encoding_ == "8UC1") {
-        flag = CV_8UC1;
-      }
-      else if (encoding_ == "16UC1") {
-        flag = CV_16UC1;
+      if (encoding_ == "16UC1") {
+        image_.convertTo(image_, CV_16UC1);
       }
       else if (encoding_ == "32FC1") {
-        flag = CV_32FC1;
+        image_.convertTo(image_, CV_32FC1);
+        image_ = image_ / 1000.0;
       }
-      image_.convertTo(image_, flag);
       if ( image_.empty() ) { // if filename is motion file or device file
         try {  // if filename is number
           int num = boost::lexical_cast<int>(filename_);//num is 1234798797
