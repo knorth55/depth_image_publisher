@@ -37,3 +37,12 @@ install(TARGETS depth_image_publisher_exe
 install(FILES nodelet_plugins.xml
         DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
 )
+
+
+if(CATKIN_ENABLE_TESTING)
+  find_package(roslaunch REQUIRED)
+  find_package(roslint REQUIRED)
+  find_package(rostest REQUIRED)
+  add_rostest(test/depth_image_publisher.test)
+  roslaunch_add_file_check(test/depth_image_publisher.test)
+endif()
