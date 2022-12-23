@@ -147,6 +147,9 @@ public:
         image_.convertTo(image_, CV_32FC1);
         image_ = image_ / 1000.0;
       }
+      else {
+        ROS_ERROR_STREAM("Unsupported type: " << encoding_);
+      }
       if ( image_.empty() ) { // if filename is motion file or device file
         try {  // if filename is number
           int num = boost::lexical_cast<int>(filename_);//num is 1234798797
